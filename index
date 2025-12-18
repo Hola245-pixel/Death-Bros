@@ -108,7 +108,7 @@
 
 <header>
   <!-- CUANDO SUBAS EL LOGO, CAMBIA src -->
-  <img src=logo.png" alt="DEATH BROS Logo">
+  <img src="logo.png" alt="DEATH BROS Logo">
   <h1>ELITE PvP CLAN</h1>
 </header>
 
@@ -160,15 +160,14 @@
 <section id="ranking">
   <h2>🏆 Ranking PvP</h2>
   <ul>
-    <li>🥇 bro1 — 120 kills</li>
-    <li>🥈 ShadowX — 98 kills</li>
-    <li>🥉 KillFox — 80 kills</li>
+    <li>🥇 bro1 — 10000 kills</li>
+    <li>🥈 ShadowX — 5000 kills</li>
+    <li>🥉 KillFox — 1000 kills</li>
   </ul>
 </section>
 
 <section class="buttons">
-  <a href="https://discord.gg/TU_INVITE" target="_blank">Discord</a>
-  <a href="https://www.roblox.com/groups/TU_GRUPO" target="_blank">Grupo Roblox</a>
+  <a href="https://discord.gg/TdmA287e" target="_blank">Discord</a>
 </section>
 
 <footer>
