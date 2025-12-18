@@ -108,7 +108,7 @@
 
 <header>
   <!-- CUANDO SUBAS EL LOGO, CAMBIA src -->
-  <img src="logo.png" alt="DEATH BROS Logo">
+  <img src=logo.png" alt="DEATH BROS Logo">
   <h1>ELITE PvP CLAN</h1>
 </header>
 
