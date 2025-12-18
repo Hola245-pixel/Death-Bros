@@ -1,88 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>DEATH BROS</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>DEATH BROS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: radial-gradient(circle at top, #111, #000);
-            color: white;
-            text-align: center;
-        }
+<style>
+* {
+    box-sizing: border-box;
+}
 
-        header {
-            padding: 80px 20px;
-        }
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: radial-gradient(circle at top, #1a0000, #000);
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
 
-        h1 {
-            font-size: 60px;
-            letter-spacing: 4px;
-            margin-bottom: 10px;
-        }
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
 
-        p {
-            font-size: 18px;
-            color: #ccc;
-        }
+.logo {
+    width: 180px;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite;
+}
 
-        .buttons {
-            margin-top: 40px;
-        }
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
 
-        .btn {
-            display: inline-block;
-            margin: 10px;
-            padding: 15px 30px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            color: white;
-            background: linear-gradient(45deg, #ff0000, #900);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
+h1 {
+    font-size: 64px;
+    margin: 0;
+    letter-spacing: 6px;
+}
 
-        .btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 15px red;
-        }
+p {
+    color: #ccc;
+    margin: 10px 0 30px;
+}
 
-        footer {
-            margin-top: 80px;
-            padding: 20px;
-            font-size: 14px;
-            color: #666;
-        }
-    </style>
+.buttons a {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 35px;
+    background: linear-gradient(45deg, #ff0000, #700000);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.buttons a:hover {
+    box-shadow: 0 0 20px red;
+    transform: scale(1.1);
+}
+
+footer {
+    position: absolute;
+    bottom: 20px;
+    font-size: 13px;
+    color: #555;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <h1>☠️ DEATH BROS</h1>
-    <p>Clan PvP • Dominio • Honor • Poder</p>
+    <img src="logo.png" class="logo" alt="DEATH BROS Logo">
 
-    <div class="buttons">
-        <a class="btn" href="https://docs.google.com/forms/d/18ReyR2p5SdFC7XkldkxFEY6VNngTbP_lZ-uYh4TxmMM/viewform" target="_blank">
-            📝 Reclutamiento
-        </a>
-
-        <a class="btn" href="https://discord.com/" target="_blank">
-            💬 Discord
-        </a>
-
-        <a class="btn" href="https://www.roblox.com/" target="_blank">
-            🎮 Roblox
-        </a>
-    </div>
-</header>
-
-<footer>
-    © 2025 DEATH BROS — No afiliado con Roblox
-</footer>
-
-</body>
-</html>
+    <h
