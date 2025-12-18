@@ -6,9 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
     margin: 0;
@@ -16,7 +14,7 @@ body {
     background: radial-gradient(circle at top, #1a0000, #000);
     color: white;
     min-height: 100vh;
-    overflow-x: hidden;
+    text-align: center;
 }
 
 header {
@@ -24,32 +22,50 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    padding: 80px 20px;
 }
 
-.logo {
-    width: 180px;
-    margin-bottom: 20px;
-    animation: pulse 2s infinite;
+/* PERFIL */
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
+.profile img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid red;
+    box-shadow: 0 0 20px red;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
 }
 
+.profile img:hover {
+    transform: scale(1.1);
+}
+
+.profile h2 {
+    margin: 5px 0;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+.profile span {
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* TITULO */
 h1 {
     font-size: 64px;
-    margin: 0;
+    margin: 10px 0;
     letter-spacing: 6px;
 }
 
-p {
-    color: #ccc;
-    margin: 10px 0 30px;
-}
-
+/* BOTONES */
 .buttons a {
     display: inline-block;
     margin: 10px;
@@ -67,9 +83,41 @@ p {
     transform: scale(1.1);
 }
 
+/* PANELES */
+.panel {
+    background: rgba(0,0,0,0.65);
+    border: 1px solid #400;
+    box-shadow: 0 0 15px #400;
+    border-radius: 14px;
+    padding: 20px;
+    margin: 25px auto;
+    max-width: 420px;
+}
+
+.panel h3 {
+    margin-top: 0;
+    color: red;
+    letter-spacing: 1px;
+}
+
+.panel ul {
+    list-style: none;
+    padding: 0;
+}
+
+.panel ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #300;
+}
+
+.panel p {
+    color: #ccc;
+    font-size: 15px;
+}
+
+/* FOOTER */
 footer {
-    position: absolute;
-    bottom: 20px;
+    margin-top: 60px;
     font-size: 13px;
     color: #555;
 }
@@ -79,6 +127,60 @@ footer {
 <body>
 
 <header>
-    <img src="logo.png" class="logo" alt="DEATH BROS Logo">
 
-    <h
+<!-- PERFIL ROBLOX -->
+<div class="profile">
+    <a href="https://www.roblox.com/es/users/8946944719/profile" target="_blank">
+        <img src="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-8946944719-Png/150/150/AvatarHeadshot/Png" alt="bro1 Roblox">
+    </a>
+    <h2>bro1</h2>
+    <span>Líder • DEATH BROS</span>
+</div>
+
+<!-- TITULO -->
+<h1>☠️ DEATH BROS</h1>
+<p>Clan PvP • Dominio • Honor • Poder</p>
+
+<!-- BOTONES -->
+<div class="buttons">
+    <a href="https://docs.google.com/forms/d/18ReyR2p5SdFC7XkldkxFEY6VNngTbP_lZ-uYh4TxmMM/viewform" target="_blank">
+        📝 Reclutamiento
+    </a>
+    <a href="https://discord.com/" target="_blank">
+        💬 Discord
+    </a>
+    <a href="https://www.roblox.com/" target="_blank">
+        🎮 Roblox
+    </a>
+</div>
+
+<!-- ANUNCIOS -->
+<div class="panel">
+    <h3>📢 Anuncios del Clan</h3>
+    <ul>
+        <li>🔥 Reclutamiento ABIERTO</li>
+        <li>⚔️ PvP oficial este viernes</li>
+        <li>🏆 Ranking se reinicia pronto</li>
+    </ul>
+</div>
+
+<!-- MENSAJES -->
+<div class="panel">
+    <h3>💬 Mensaje del Líder</h3>
+    <p>
+        Bienvenidos a <b>DEATH BROS</b>.<br><br>
+        Aquí solo sobreviven los fuertes.<br>
+        Respeto, disciplina y dominio total.<br><br>
+        — bro1
+    </p>
+</div>
+
+</header>
+
+<footer>
+© 2025 DEATH BROS — No afiliado con Roblox
+</footer>
+
+</body>
+</html>
+
