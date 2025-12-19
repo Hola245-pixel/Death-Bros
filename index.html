@@ -181,7 +181,7 @@ footer {
     <ul>
         <li>🔥 Reclutamiento ABIERTO</li>
         <li>⚔️ PvP cerrado temporalmente</li>
-        <li>🏆 Ranking se reinicia pronto</li>
+        <li>🏆 Ranking se actualiza automáticamente</li>
     </ul>
 </div>
 
@@ -190,21 +190,16 @@ footer {
     <h3>💬 Mensaje del Líder</h3>
     <p>
         Bienvenidos a <b>DEATH BROS</b>.<br><br>
-        Este Es El Clan De MainUnity el Bro1 Reglas:.<br>
         Respeto, disciplina y dominio total.<br><br>
         — bro1
     </p>
 </div>
 
-<!-- RANKING -->
+<!-- RANKING AUTOMÁTICO DESDE GOOGLE SHEETS -->
 <div class="panel">
     <h3>🏆 Ranking PvP</h3>
-    <ul class="ranking">
-        <li><span class="rank">🥇 bro2</span><span class="points">15000 pts</span></li>
-        <li><span class="rank">🥈 ShadowX</span><span class="points">10000 pts</span></li>
-        <li><span class="rank">🥉 NightKill</span><span class="points">5000 pts</span></li>
-        <li><span>⚔️ DarkWolf</span><span class="points">3000 pts</span></li>
-        <li><span>⚔️ Venom</span><span class="points">1500 pts</span></li>
+    <ul class="ranking" id="rankingList">
+        <li>Cargando ranking...</li>
     </ul>
 </div>
 
@@ -213,6 +208,34 @@ footer {
 <footer>
 © 2025 DEATH BROS — No afiliado con Roblox
 </footer>
+
+<!-- SCRIPT GOOGLE SHEETS -->
+<script>
+const sheetURL =
+"https://opensheet.elk.sh/1YSKHgWSdkbH6UnoXcQTG7X_y6ntNWMd4WLWQ7ZNHfM0/Sheet1";
+
+fetch(sheetURL)
+.then(res => res.json())
+.then(data => {
+    const list = document.getElementById("rankingList");
+    list.innerHTML = "";
+
+    data.sort((a, b) => Number(b.Puntos) - Number(a.Puntos));
+
+    data.forEach(player => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+            <span class="rank">${player.Puesto} ${player.Rango}</span>
+            <span class="points">${player.Puntos} pts</span>
+        `;
+        list.appendChild(li);
+    });
+})
+.catch(() => {
+    document.getElementById("rankingList").innerHTML =
+        "<li>Error cargando ranking</li>";
+});
+</script>
 
 </body>
 </html>
