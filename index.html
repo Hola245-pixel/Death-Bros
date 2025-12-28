@@ -4,35 +4,69 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DeathBro Clanz</title>
+
   <style>
+    /* ===== FONDO GUERRA ===== */
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #0d0d0d;
-      color: #fff;
+      color: #ffffff;
+
+      background-image: url("fondo-war.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
     }
+
+    /* OSCURECER PARA LEGIBILIDAD */
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.75);
+      min-height: 100vh;
+    }
+
+    /* ===== HEADER ===== */
     header {
-      background-color: #1a1a1a;
-      padding: 15px;
+      background-color: rgba(10, 10, 10, 0.9);
+      padding: 20px;
       text-align: center;
-      border-bottom: 2px solid #ff0000;
+      border-bottom: 3px solid #ff0000;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
     }
+
     header h1 {
-      color: #ff0000;
       margin: 0;
+      color: #ff0000;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px #ff0000;
     }
+
+    header p {
+      margin: 5px 0 0;
+      color: #ccc;
+    }
+
+    /* ===== CONTENIDO ===== */
     section {
       max-width: 900px;
       margin: auto;
       padding: 20px;
     }
+
     .card {
-      background-color: #181818;
+      background-color: rgba(15, 15, 15, 0.95);
       padding: 20px;
       margin-bottom: 20px;
       border-left: 4px solid #ff0000;
-      border-radius: 5px;
+      border-radius: 6px;
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
     }
+
+    .card h2 {
+      margin-top: 0;
+      color: #ff4444;
+    }
+
+    /* ===== BOTONES ===== */
     .btn {
       background-color: #ff0000;
       color: white;
@@ -42,12 +76,16 @@
       display: inline-block;
       margin-top: 10px;
       transition: 0.2s;
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
     }
+
     .btn:hover {
-      background-color: #cc0000;
+      background-color: #b30000;
     }
+
+    /* ===== CHAT ===== */
     .chat-box {
-      background-color: #111;
+      background-color: #0f0f0f;
       border: 1px solid #333;
       border-radius: 5px;
       padding: 10px;
@@ -55,118 +93,149 @@
       overflow-y: auto;
       margin-bottom: 10px;
     }
+
     .msg {
-      background-color: #262626;
+      background-color: #1f1f1f;
       padding: 8px;
       border-radius: 5px;
       margin-bottom: 5px;
+      border-left: 2px solid #ff0000;
     }
+
+    /* ===== RANKING ===== */
     .ranking {
       max-height: 200px;
-      overflow-y: scroll;
-      background-color: #111;
+      overflow-y: auto;
+      background-color: #0f0f0f;
       padding: 10px;
       border-radius: 5px;
     }
+
+    /* ===== INPUTS ===== */
     input, button {
       border: none;
       padding: 8px;
       border-radius: 4px;
     }
+
     input {
       width: 70%;
       background-color: #222;
       color: white;
     }
+
     button {
       background-color: #ff0000;
       color: white;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      color: #aaa;
+      font-size: 14px;
     }
   </style>
 </head>
+
 <body>
+<div class="overlay">
 
   <header>
-    <h1>DeathBro Clanz</h1>
-    <p>Comunidad gamer estilo Discord</p>
+    <h1>☠️ DEATHBRO CLANZ ☠️</h1>
+    <p>Clan de guerra • Fuego • Dominio total</p>
   </header>
 
   <section>
+
     <div class="card">
       <h2>📢 Anuncios</h2>
-      <p>Bienvenido al sitio oficial del clan DeathBro Clanz. Mantente atento a los nuevos eventos y torneos.</p>
+      <p>Bienvenido al cuartel oficial de DeathBro Clanz. Solo los fuertes sobreviven.</p>
     </div>
 
     <div class="card">
       <h2>🏆 Ranking</h2>
       <div class="ranking">
-        <p>1️⃣ Bro2 — 15000 pts</p>
-        <p>2️⃣ ShadowX — 10000 pts</p>
-        <p>3️⃣ Reaper1 — 8500 pts</p>
-        <p>4️⃣ Reaper2 — 5000 pts</p>
-        <p>5️⃣ Pro — 3000 pts</p>
-        <p>6️⃣ Noob — 1500 pts</p>
+        <p>🥇 Bro2 — 15000 pts</p>
+        <p>🥈 ShadowX — 10000 pts</p>
+        <p>🥉 Reaper1 — 8500 pts</p>
+        <p>Reaper2 — 5000 pts</p>
+        <p>Pro — 3000 pts</p>
+        <p>Noob — 1500 pts</p>
       </div>
     </div>
 
     <div class="card">
-      <h2>💬 Chat (simulado)</h2>
+      <h2>💬 Chat del Clan</h2>
       <div class="chat-box" id="chatBox">
-        <div class="msg"><strong>Bro2:</strong> Bienvenidos al clan!</div>
-        <div class="msg"><strong>ShadowX:</strong> Vamos a dominar los juegos 🔥</div>
+        <div class="msg"><strong>Bro2:</strong> El campo de batalla nos espera.</div>
+        <div class="msg"><strong>ShadowX:</strong> Ningún enemigo queda en pie 🔥</div>
       </div>
-      <input id="chatInput" placeholder="Escribe un mensaje...">
+      <input id="chatInput" placeholder="Escribe tu mensaje...">
       <button onclick="enviar()">Enviar</button>
     </div>
 
     <div class="card">
       <h2>🎮 Juegos del Clan</h2>
       <ul>
-        <li>⚔️ TSB</li>
+        <li>⚔️ The Strongest Battlegrounds</li>
         <li>🍇 Blox Fruits</li>
         <li>⚽ Blue Lock</li>
       </ul>
     </div>
 
     <div class="card">
-      <h2>🔢 Tu código de jugador</h2>
+      <h2>🔢 Tu Código de Guerrero</h2>
       <p id="codigo"></p>
-      <a class="btn" href="https://discord.gg/m3dyt6Fq" target="_blank">📨 Enviar mi código al Discord DeathBros z</a>
+      <a class="btn" href="https://discord.gg/m3dyt6Fq" target="_blank">
+        Enviar código al Discord
+      </a>
     </div>
 
     <div class="card">
       <h2>📝 Reclutamiento</h2>
-      <a class="btn" href="https://docs.google.com/forms/d/18ReyR2p5SdFC7XkldkxFEY6VNngTbP_lZ-uYh4TxmMM/viewform" target="_blank">Formulario de Reclutamiento</a>
+      <a class="btn" href="https://docs.google.com/forms/d/18ReyR2p5SdFC7XkldkxFEY6VNngTbP_lZ-uYh4TxmMM/viewform" target="_blank">
+        Unirme al Clan
+      </a>
     </div>
 
     <div class="card">
       <h2>🔗 Perfil de Roblox</h2>
-      <a class="btn" href="https://www.roblox.com/es/users/8946944719/profile" target="_blank">Ver perfil</a>
+      <a class="btn" href="https://www.roblox.com/es/users/8946944719/profile" target="_blank">
+        Ver Perfil
+      </a>
     </div>
+
   </section>
 
-  <script>
-    // Chat simulado
-    function enviar() {
-      const input = document.getElementById('chatInput');
-      const box = document.getElementById('chatBox');
-      if (input.value.trim() !== '') {
-        const div = document.createElement('div');
-        div.className = 'msg';
-        div.innerHTML = '<strong>Tú:</strong> ' + input.value;
-        box.appendChild(div);
-        box.scrollTop = box.scrollHeight;
-        input.value = '';
-      }
-    }
+  <footer>
+    © 2025 DEATH BROS — No afiliado con Roblox
+  </footer>
 
-    // Generador de código
-    function generarCodigo() {
-      const randomNum = Math.floor(10000 + Math.random() * 90000);
-      return "DB-" + randomNum;
+</div>
+
+<script>
+  function enviar() {
+    const input = document.getElementById('chatInput');
+    const box = document.getElementById('chatBox');
+
+    if (input.value.trim() !== '') {
+      const div = document.createElement('div');
+      div.className = 'msg';
+      div.innerHTML = '<strong>Tú:</strong> ' + input.value;
+      box.appendChild(div);
+      box.scrollTop = box.scrollHeight;
+      input.value = '';
     }
-    document.getElementById('codigo').innerText = generarCodigo();
-  </script>
+  }
+
+  function generarCodigo() {
+    return "DB-" + Math.floor(10000 + Math.random() * 90000);
+  }
+
+  document.getElementById('codigo').innerText = generarCodigo();
+</script>
 
 </body>
-</html
+</html>
